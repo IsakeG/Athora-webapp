@@ -1,0 +1,122 @@
+:root {
+  --bg: #050608;          /* obsidian */
+  --panel: #0f1411;
+  --green: #00ff88;       /* emerald */
+  --white: #ffffff;
+  --muted: #a1a1aa;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--white);
+}
+
+/* GLOBAL */
+a { color: inherit; text-decoration: none; }
+
+/* BUTTONS */
+.btn {
+  background: var(--green);
+  color: black;
+  padding: 10px 14px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-outline {
+  border: 1px solid var(--green);
+  background: transparent;
+  color: var(--white);
+  padding: 10px 14px;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  border-bottom: 1px solid #1f2937;
+}
+
+.logo {
+  color: var(--green);
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* HERO */
+.hero {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 42px;
+}
+
+.hero p {
+  color: var(--muted);
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  padding: 20px;
+}
+
+.card {
+  background: var(--panel);
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #1f2937;
+}
+
+/* AUTH */
+.auth-box {
+  width: 350px;
+  margin: auto;
+  margin-top: 80px;
+  background: var(--panel);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  background: #111;
+  border: 1px solid #333;
+  color: white;
+}
+
+/* FEED */
+.feed {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.video {
+  height: 100vh;
+  scroll-snap-align: start;
+  position: relative;
+  background: black;
+}
+
+.video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 15px;
+}
